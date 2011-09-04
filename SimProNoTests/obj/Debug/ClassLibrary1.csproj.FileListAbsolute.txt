@@ -1,0 +1,17 @@
+C:\Users\Anders\Documents\Visual Studio 2010\Projects\MvcApplication1\ClassLibrary1\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Anders\Documents\Visual Studio 2010\Projects\MvcApplication1\ClassLibrary1\bin\Debug\ClassLibrary1.exe
+C:\Users\Anders\Documents\Visual Studio 2010\Projects\MvcApplication1\ClassLibrary1\bin\Debug\ClassLibrary1.pdb
+C:\Users\Anders\Documents\Visual Studio 2010\Projects\MvcApplication1\ClassLibrary1\bin\Debug\MvcApplication1.dll
+C:\Users\Anders\Documents\Visual Studio 2010\Projects\MvcApplication1\ClassLibrary1\bin\Debug\nunit-gui-runner.dll
+C:\Users\Anders\Documents\Visual Studio 2010\Projects\MvcApplication1\ClassLibrary1\bin\Debug\nunit.framework.dll
+C:\Users\Anders\Documents\Visual Studio 2010\Projects\MvcApplication1\ClassLibrary1\bin\Debug\nunit.mocks.dll
+C:\Users\Anders\Documents\Visual Studio 2010\Projects\MvcApplication1\ClassLibrary1\bin\Debug\pnunit.framework.dll
+C:\Users\Anders\Documents\Visual Studio 2010\Projects\MvcApplication1\ClassLibrary1\bin\Debug\nunit.util.dll
+C:\Users\Anders\Documents\Visual Studio 2010\Projects\MvcApplication1\ClassLibrary1\bin\Debug\nunit.uikit.dll
+C:\Users\Anders\Documents\Visual Studio 2010\Projects\MvcApplication1\ClassLibrary1\bin\Debug\nunit.core.dll
+C:\Users\Anders\Documents\Visual Studio 2010\Projects\MvcApplication1\ClassLibrary1\bin\Debug\nunit.core.interfaces.dll
+C:\Users\Anders\Documents\Visual Studio 2010\Projects\MvcApplication1\ClassLibrary1\bin\Debug\nunit.uiexception.dll
+C:\Users\Anders\Documents\Visual Studio 2010\Projects\MvcApplication1\ClassLibrary1\bin\Debug\MvcApplication1.pdb
+C:\Users\Anders\Documents\Visual Studio 2010\Projects\MvcApplication1\ClassLibrary1\bin\Debug\nunit.framework.xml
+C:\Users\Anders\Documents\Visual Studio 2010\Projects\MvcApplication1\ClassLibrary1\obj\Debug\ClassLibrary1.exe
+C:\Users\Anders\Documents\Visual Studio 2010\Projects\MvcApplication1\ClassLibrary1\obj\Debug\ClassLibrary1.pdb

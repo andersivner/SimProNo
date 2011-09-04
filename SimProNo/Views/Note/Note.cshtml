@@ -1,0 +1,12 @@
+﻿@model SimProNo.Models.Note
+<div id="@Html.Raw("Note" + Model.Id.ToString())" >
+        <div>@Model.Text</div>
+        <br/>
+        <div>
+        @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+        @Html.ActionLink("Select", "ByParent", new { id = Model.Id }) |
+        @Html.ActionLink("Delete", "Delete", new { id = Model.Id }) |
+        @String.Format("{0:g}", Model.CreateDate) |
+        @Html.Partial("NoteAction" + Model.NoteTypeEnum.ToString(), Model)
+        </div>
+</div>

@@ -1,0 +1,15 @@
+﻿@model IEnumerable<SimProNo.Models.Note>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+@using (Html.BeginForm())
+{
+@Html.TextArea("Text")
+ <input type="submit" value="Add" />
+}
+
+@Html.Partial("NoteList", Model)

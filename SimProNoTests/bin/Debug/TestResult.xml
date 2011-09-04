@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!--This file represents the results of running a test suite-->
+<test-results name="C:\Users\Anders\Documents\SimProNoSource\SimProNo\SimProNoTests\bin\Debug\SimProNo.Tests.exe" total="3" errors="0" failures="0" not-run="0" inconclusive="0" ignored="0" skipped="0" invalid="0" date="2011-07-06" time="22:16:20">
+  <environment nunit-version="2.5.10.11092" clr-version="4.0.30319.235" os-version="Microsoft Windows NT 6.1.7601 Service Pack 1" platform="Win32NT" cwd="C:\Users\Anders\Documents\SimProNoSource\SimProNo\SimProNoTests\bin\Debug" machine-name="VITELLO" user="Anders" user-domain="Vitello" />
+  <culture-info current-culture="sv-SE" current-uiculture="sv-SE" />
+  <test-suite type="Assembly" name="C:\Users\Anders\Documents\SimProNoSource\SimProNo\SimProNoTests\bin\Debug\SimProNo.Tests.exe" executed="True" result="Success" success="True" time="0.968" asserts="0">
+    <results>
+      <test-suite type="Namespace" name="ClassLibrary1" executed="True" result="Success" success="True" time="0.953" asserts="0">
+        <results>
+          <test-suite type="TestFixture" name="Class1" executed="True" result="Success" success="True" time="0.952" asserts="0">
+            <results>
+              <test-case name="ClassLibrary1.Class1.Given_NoNotes_When_CreatingANote_Then_ThatNoteIsDiplayed" executed="True" result="Success" success="True" time="0.918" asserts="2" />
+              <test-case name="ClassLibrary1.Class1.Given_OneNote_When_ViewingIndex_Then_OneNoteIsDisplayed" executed="True" result="Success" success="True" time="0.005" asserts="1" />
+              <test-case name="ClassLibrary1.Class1.Given_TwoNotes_When_ViewingIndex_Then_NotesAreOrderedByDateDescending" executed="True" result="Success" success="True" time="0.005" asserts="3" />
+            </results>
+          </test-suite>
+        </results>
+      </test-suite>
+    </results>
+  </test-suite>
+</test-results>

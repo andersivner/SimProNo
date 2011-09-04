@@ -1,0 +1,10 @@
+﻿@model SimProNo.Models.Note
+
+@if (Model.CompletedDate.HasValue)
+{
+    @:Completed @Model.CompletedDate
+}
+else
+{
+    @Ajax.ActionLink("Mark Done!", "Completed", new { id = Model.Id }, new AjaxOptions() { HttpMethod="Post", UpdateTargetId = "Note" + Model.Id.ToString() })
+}

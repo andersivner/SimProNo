@@ -1,0 +1,14 @@
+﻿@model SimProNo.Models.Note
+
+@{
+    ViewBag.Title = "ByParent";
+}
+
+<h2>ByParent</h2>
+@Html.Partial("Note", Model)
+@using (Html.BeginForm())
+{
+@Html.TextArea("Text")
+ <input type="submit" value="Add" />
+}
+@Html.Partial("NoteList", Model.Subnotes)
