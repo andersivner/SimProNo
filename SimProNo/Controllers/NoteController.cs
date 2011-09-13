@@ -24,7 +24,6 @@ namespace SimProNo.Controllers
 
         public ActionResult Index()
         {
-            throw new Exception("test");
             return View(context.Notes.Where(x => x.Parent == null).OrderByDescending(x => x.CreateDate).Take(20));
         }
 
