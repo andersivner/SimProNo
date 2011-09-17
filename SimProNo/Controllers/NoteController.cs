@@ -6,6 +6,7 @@ using System.Web.Mvc;
 using System.Data.Objects;
 using System.Data.Entity;
 using SimProNo.Models;
+using System.Configuration;
 
 namespace SimProNo.Controllers
 {
@@ -24,6 +25,8 @@ namespace SimProNo.Controllers
 
         public ActionResult Index()
         {
+            throw new Exception(ConfigurationManager.ConnectionStrings["ApplicationServices"].ConnectionString);
+
             return View(context.Notes.Where(x => x.Parent == null).OrderByDescending(x => x.CreateDate).Take(20));
         }
 
