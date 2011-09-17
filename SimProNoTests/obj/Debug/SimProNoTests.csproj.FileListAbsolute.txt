@@ -48,3 +48,5 @@ C:\Users\Anders\Documents\Source\SimProNo\SimProNoTests\bin\Debug\Microsoft.Prac
 C:\Users\Anders\Documents\Source\SimProNo\SimProNoTests\obj\Debug\ResolveAssemblyReference.cache
 C:\Users\Anders\Documents\Source\SimProNo\SimProNoTests\obj\Debug\SimProNo.Tests.exe
 C:\Users\Anders\Documents\Source\SimProNo\SimProNoTests\obj\Debug\SimProNo.Tests.pdb
+C:\Users\Anders\Documents\Source\SimProNo\SimProNoTests\bin\Debug\WebActivator.dll
+C:\Users\Anders\Documents\Source\SimProNo\SimProNoTests\bin\Debug\Devtalk.EF.CodeFirst.dll

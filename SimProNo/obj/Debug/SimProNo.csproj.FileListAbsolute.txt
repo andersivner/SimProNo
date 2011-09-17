@@ -30,3 +30,6 @@ C:\Users\Anders\Documents\Source\SimProNo\SimProNo\bin\Microsoft.Practices.Unity
 C:\Users\Anders\Documents\Source\SimProNo\SimProNo\obj\Debug\ResolveAssemblyReference.cache
 C:\Users\Anders\Documents\Source\SimProNo\SimProNo\obj\Debug\SimProNo.dll
 C:\Users\Anders\Documents\Source\SimProNo\SimProNo\obj\Debug\SimProNo.pdb
+C:\Users\Anders\Documents\Source\SimProNo\SimProNo\bin\Devtalk.EF.CodeFirst.dll
+C:\Users\Anders\Documents\Source\SimProNo\SimProNo\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Anders\Documents\Source\SimProNo\SimProNo\bin\WebActivator.dll
