@@ -33,6 +33,8 @@ namespace SimProNo
 
         protected void Application_Start()
         {
+            throw new Exception("dfgdgdf");
+
             Database.SetInitializer<NoteDb>(new DropCreateDatabaseIfModelChanges<NoteDb>());
 
             var container = new UnityContainer();

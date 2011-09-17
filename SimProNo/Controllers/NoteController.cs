@@ -25,8 +25,6 @@ namespace SimProNo.Controllers
 
         public ActionResult Index()
         {
-            throw new Exception(ConfigurationManager.ConnectionStrings["ApplicationServices"].ConnectionString);
-
             return View(context.Notes.Where(x => x.Parent == null).OrderByDescending(x => x.CreateDate).Take(20));
         }
 
