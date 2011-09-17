@@ -6,6 +6,7 @@ using System.Web.Mvc;
 using System.Web.Routing;
 using System.Data.Entity;
 using Microsoft.Practices.Unity;
+using Devtalk.EF.CodeFirst;
 
 namespace SimProNo
 {
@@ -33,7 +34,7 @@ namespace SimProNo
 
         protected void Application_Start()
         {
-            Database.SetInitializer<NoteDb>(new DropCreateDatabaseAlways<NoteDb>());
+            Database.SetInitializer<NoteDb>(new DontDropDbJustCreateTablesIfModelChanged<NoteDb>());
 
             var container = new UnityContainer();
             container.RegisterType<NoteContext, NoteDb>();
