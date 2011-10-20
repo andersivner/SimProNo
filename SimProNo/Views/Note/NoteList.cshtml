@@ -1,10 +1,8 @@
 ﻿@model IEnumerable<SimProNo.Models.Note>
 
-<table>
-    <tr><td>
+<div class="NoteList">
 @foreach (var item in Model) {
     Html.RenderPartial("Note", item);
 }
-</td></tr>
-</table>
+</div> 
 

@@ -1,0 +1,8 @@
+﻿@model IEnumerable<SimProNo.ViewModels.DateNoteGroup>
+
+<div class="NoteGroupList">
+@foreach (var item in Model) { 
+    Html.RenderPartial("NoteGroup", item);
+}
+</div> 
+

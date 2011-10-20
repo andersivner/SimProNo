@@ -1,15 +1,16 @@
-﻿@model IEnumerable<SimProNo.Models.Note>
+﻿@model IEnumerable<SimProNo.ViewModels.DateNoteGroup>
 
 @{
     ViewBag.Title = "Index";
 }
 
-<h2>Index</h2>
+<h2>All notes</h2>
 
 @using (Html.BeginForm())
 {
-@Html.TextArea("Text")
- <input type="submit" value="Add" />
+  <textarea name="Text" rows="2" cols="80" class="NoteEdit">
+  </textarea>
+  <input type="submit" value="Add" />
 }
 
-@Html.Partial("NoteList", Model)
+@Html.Partial("NoteGroupList", Model)

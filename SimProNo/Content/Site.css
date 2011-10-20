@@ -208,7 +208,7 @@ input[type="text"]
 
 input[type="password"] 
 {
-    width: 200px;
+    width: 200px; 
     border: 1px solid #CCC;
 }
 
@@ -342,4 +342,51 @@ div#title
 .tri-state
 {
     width: 6em;
+}
+
+.NoteArea
+{
+   padding-top: 5px;
+}
+
+.NoteText
+{
+    color: Black;
+}
+
+.NoteExtras
+{
+}
+
+.NoteAction
+{
+}
+
+.NoteDate
+{
+    text-align: right;
+    color: Gray;
+    font-size: 10px;
+}
+
+.NoteList
+{
+    padding-left: 20px;
+}
+
+.NoteEdit
+{
+    width: 100%;
+    min-height: 50px;
+}
+
+.NoteGroup
+{
+}
+
+.NoteGroupLabel
+{
+    background-color: #8888BB;
+    color: White;
+    font-size: 10px;
 }

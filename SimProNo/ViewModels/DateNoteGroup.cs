@@ -6,8 +6,9 @@ using SimProNo.Models;
 
 namespace SimProNo.ViewModels
 {
-    public class NoteIndex
+    public class DateNoteGroup
     {
-        public List<Note> Notes { get; set; }
+        public DateTime Date {get; set;}
+        public IEnumerable<Note> Notes { get; set; }
     }
 }

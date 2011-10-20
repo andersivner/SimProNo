@@ -7,6 +7,7 @@ using System.Data.Objects;
 using System.Data.Entity;
 using SimProNo.Models;
 using System.Configuration;
+using SimProNo.ViewModels;
 
 namespace SimProNo.Controllers
 {
@@ -25,7 +26,16 @@ namespace SimProNo.Controllers
 
         public ActionResult Index()
         {
-            return View(context.Notes.Where(x => x.Parent == null).OrderByDescending(x => x.CreateDate).Take(20));
+            var notes = context.Notes.OrderByDescending(x => x.CreateDate).Take(100).ToList();
+
+            var notegroups = notes.GroupBy(x => x.CreateDate.Date)
+                                .Select(x => new DateNoteGroup()
+                                {
+                                    Date = x.Key,
+                                    Notes = x.OrderByDescending(n => n.CreateDate)
+                                });
+
+            return View(notegroups);
         }
 
         [HttpPost]
@@ -37,6 +47,8 @@ namespace SimProNo.Controllers
 
             Note note = context.Notes.Add(new Models.Note() { CreateDate = DateTime.Now, Text = text, NoteTypeEnum = noteType });
             context.SaveChanges();
+
+            ModelState.Clear();
 
             return Index();
         }

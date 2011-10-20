@@ -1,0 +1,9 @@
+﻿@model SimProNo.ViewModels.DateNoteGroup
+
+<div class="NoteGroup">
+<div class="NoteGroupLabel">
+@Model.Date.ToString("ddddd, d MMMM yyyy")
+</div>
+@Html.Partial("NoteList", Model.Notes)
+</div> 
+
