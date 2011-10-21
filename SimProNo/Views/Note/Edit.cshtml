@@ -1,0 +1,9 @@
+﻿@model SimProNo.Models.Note
+
+@using (Ajax.BeginForm("Edit", new { id = Model.Id }, new AjaxOptions() { HttpMethod="Post", UpdateTargetId = "Note" + Model.Id.ToString() }))
+{
+  <textarea name="Text" rows="2" cols="80" class="NoteEditInline">
+  @Model.Text
+  </textarea>
+  <input type="submit" value="Change" />
+}

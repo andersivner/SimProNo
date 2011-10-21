@@ -1,10 +1,13 @@
 ﻿@model SimProNo.Models.Note
-<div id="@Html.Raw("Note" + Model.Id.ToString())" class="NoteArea">
-    <div class="NoteText">@Model.Text</div>
-    <div class="NoteExtras">
-         <div class="NoteDate">
-        @Model.CreateDate.ToString("HH:mm")
-        </div>
-        @Html.Partial("NoteAction" + Model.NoteTypeEnum.ToString(), Model)
+<div class="NoteText">@Model.Text</div>
+<div class="NoteExtras">
+    <div class="NoteFooter">
+    <span class="NoteCommands">
+    @Ajax.ActionLink("Edit", "Edit", new { id = Model.Id }, new AjaxOptions() { HttpMethod = "Get", UpdateTargetId = "Note" + Model.Id.ToString() })
+    </span>
+    <span class="NoteDate">
+    @Model.CreateDate.ToString("HH:mm")
+    </span>
     </div>
+    @Html.Partial("NoteAction" + Model.NoteTypeEnum.ToString(), Model)
 </div>

@@ -79,5 +79,22 @@ namespace SimProNo.Controllers
             context.SaveChanges();
             return PartialView("Note", note);
         }
+
+        public ActionResult Edit(int id)
+        {
+            var note = context.Notes.Find(id);
+
+            return PartialView(note);
+        }
+
+        [HttpPost]
+        public ActionResult Edit(int id, string text)
+        {
+            var note = context.Notes.Find(id);
+            note.Text = text;
+            context.SaveChanges();
+
+            return PartialView("Note", note);
+        }
     }
 }
