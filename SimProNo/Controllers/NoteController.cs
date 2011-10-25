@@ -80,6 +80,7 @@ namespace SimProNo.Controllers
             return PartialView("Note", note);
         }
 
+        [OutputCache(NoStore = true, Duration = 0, VaryByParam = "*")]
         public ActionResult Edit(int id)
         {
             var note = context.Notes.Find(id);
@@ -95,6 +96,14 @@ namespace SimProNo.Controllers
             context.SaveChanges();
 
             return PartialView("Note", note);
+        }
+
+        [OutputCache(NoStore = true, Duration = 0, VaryByParam = "*")]
+        public ActionResult Note(int id)
+        {
+            var note = context.Notes.Find(id);
+
+            return PartialView(note);
         }
     }
 }

@@ -357,6 +357,7 @@ div#title
 .NoteText
 {
     color: Black;
+    white-space: pre-line;
 }
 
 .NoteExtras
@@ -403,6 +404,14 @@ div#title
 }
 
 .NoteEdit
+{
+    width: 100%;
+    min-height: 50px;
+    font-family: Arial;
+    font-size: 12px;
+}
+
+.NoteEditInline
 {
     width: 100%;
     min-height: 50px;

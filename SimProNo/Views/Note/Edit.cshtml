@@ -2,8 +2,9 @@
 
 @using (Ajax.BeginForm("Edit", new { id = Model.Id }, new AjaxOptions() { HttpMethod="Post", UpdateTargetId = "Note" + Model.Id.ToString() }))
 {
-  <textarea name="Text" rows="2" cols="80" class="NoteEditInline">
-  @Model.Text
-  </textarea>
-  <input type="submit" value="Change" />
+  <textarea name="Text" rows="2" cols="40" class="NoteEditInline">@Model.Text</textarea>
+  <div class="NoteFooter">
+  <input type="submit" value="Change" style="height: 10px"/>
+  @Ajax.ActionLink("Cancel", "Note",  new { id = Model.Id }, new AjaxOptions() { HttpMethod="Get", UpdateTargetId = "Note" + Model.Id.ToString() })
+  </div>
 }
