@@ -1,10 +1,10 @@
 ﻿@model SimProNo.Models.Note
 
-@using (Ajax.BeginForm("Edit", new { id = Model.Id }, new AjaxOptions() { HttpMethod="Post", UpdateTargetId = "Note" + Model.Id.ToString() }))
+@using (Ajax.BeginForm("Edit", new { id = Model.Id }, new AjaxOptions() { HttpMethod = "Post", UpdateTargetId = "Note" + Model.Id.ToString() }, new { @id = "Edit" }))
 {
   <textarea name="Text" rows="2" cols="40" class="NoteEditInline">@Model.Text</textarea>
   <div class="NoteFooter">
-  <input type="submit" value="Change" style="height: 10px"/>
-  @Ajax.ActionLink("Cancel", "Note",  new { id = Model.Id }, new AjaxOptions() { HttpMethod="Get", UpdateTargetId = "Note" + Model.Id.ToString() })
+  <a href="#" onclick="$('#Edit').submit();">Save</a>
+  @Ajax.ActionLink("Cancel", "Note", new { id = Model.Id }, new AjaxOptions() { HttpMethod = "Get", UpdateTargetId = "Note" + Model.Id.ToString() })
   </div>
 }
