@@ -6,5 +6,5 @@
 }
 else
 {
-    @Ajax.ActionLink("Mark Done!", "Completed", new { id = Model.Id }, new AjaxOptions() { HttpMethod="Post", UpdateTargetId = "Note" + Model.Id.ToString() })
+    @Ajax.ActionLink("Done!", "Completed", new { id = Model.Id }, new AjaxOptions() { HttpMethod="Post", UpdateTargetId = "Note" + Model.Id.ToString() })
 }

@@ -62,7 +62,7 @@ namespace ClassLibrary1
             });
             var noteController = new NoteController(db.Object);
 
-            var viewResult = (ViewResult)noteController.Index("test note");
+            var viewResult = (ViewResult)noteController.NewNote("test note");
 
             var model = (IEnumerable<Note>)viewResult.Model;
             Assert.AreEqual(1, model.Count());

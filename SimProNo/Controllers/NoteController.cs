@@ -39,7 +39,7 @@ namespace SimProNo.Controllers
         }
 
         [HttpPost]
-        public ActionResult Index(string text)
+        public ActionResult NewNote(string text)
         {
             var noteType = NoteType.Status;
             if (text.EndsWith("!"))
@@ -48,9 +48,7 @@ namespace SimProNo.Controllers
             Note note = context.Notes.Add(new Models.Note() { CreateDate = DateTime.Now, Text = text, NoteTypeEnum = noteType });
             context.SaveChanges();
 
-            ModelState.Clear();
-
-            return Index();
+            return RedirectToAction("Index");
         }
 
         public ActionResult ByParent(int id)
@@ -59,7 +57,7 @@ namespace SimProNo.Controllers
         }
 
         [HttpPost]
-        public ActionResult ByParent(int id, string text)
+        public ActionResult NewNoteWithParent(int id, string text)
         {
             var noteType = NoteType.Status;
             if (text.EndsWith("!"))
@@ -68,7 +66,7 @@ namespace SimProNo.Controllers
             context.Notes.Add(new Models.Note() { CreateDate = DateTime.Now, Text = text, ParentId = id, NoteTypeEnum = noteType });
             context.SaveChanges();
 
-            return ByParent(id);
+            return RedirectToAction("ByParent", new { id = id });
         }
 
         [HttpPost]

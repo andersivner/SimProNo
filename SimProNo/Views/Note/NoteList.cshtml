@@ -2,9 +2,7 @@
 
 <div class="NoteList">
 @foreach (var item in Model) {
-    <div id="@Html.Raw("Note" + item.Id.ToString())" class="NoteArea">
-    @Html.Partial("Note", item)
-    </div>
+    Html.RenderPartial("NoteArea", item);
 }
 </div> 
 

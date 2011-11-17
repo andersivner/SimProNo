@@ -4,11 +4,27 @@
     ViewBag.Title = "ByParent";
 }
 
-<h2>ByParent</h2>
-@Html.Partial("Note", Model)
-@using (Html.BeginForm())
+<h2>By Parent</h2>
+@Html.ActionLink("Back to All Notes", "Index")
+
+<div id="@Html.Raw("Note" + Model.Id.ToString())" class="NoteArea">
+    <div class="NoteText">@Model.Text</div>
+    <div class="NoteFooter">
+         <span class="NoteCommands">
+        @Ajax.ActionLink("Edit", "Edit", new { id = Model.Id }, new AjaxOptions() { HttpMethod = "Get", UpdateTargetId = "Note" + Model.Id.ToString() })
+        @Html.Partial("NoteAction" + Model.NoteTypeEnum.ToString(), Model)
+        </span>
+        <span class="NoteDate">
+        @Model.CreateDate.ToString("ddddd, d MMMM yyyy, HH:mm")
+        </span>   
+    </div>
+</div>
+
+@using (Html.BeginForm("NewNoteWithParent", "Note", new { id = Model.Id }, FormMethod.Post, new { id = "NewNote" }))
 {
-@Html.TextArea("Text")
- <input type="submit" value="Add" />
+  <textarea name="Text" rows="2" cols="80" class="NoteEdit"></textarea>
+  <a href="#" onclick="$('#NewNote').submit();">Add</a>  
 }
+
 @Html.Partial("NoteList", Model.Subnotes)
+

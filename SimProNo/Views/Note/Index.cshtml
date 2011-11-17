@@ -6,10 +6,10 @@
 
 <h2>All notes</h2>
 
-@using (Html.BeginForm())
+@using (Html.BeginForm("NewNote", "Note", FormMethod.Post, new { id = "NewNote"}))
 {
   <textarea name="Text" rows="2" cols="80" class="NoteEdit"></textarea>
-  <input type="submit" value="Add" class="Button"/>
+  <a href="#" onclick="$('#NewNote').submit();">Add</a>  
 }
 
 @Html.Partial("NoteGroupList", Model)

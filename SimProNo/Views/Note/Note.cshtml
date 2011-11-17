@@ -4,10 +4,12 @@
     <div class="NoteFooter">
     <span class="NoteCommands">
     @Ajax.ActionLink("Edit", "Edit", new { id = Model.Id }, new AjaxOptions() { HttpMethod = "Get", UpdateTargetId = "Note" + Model.Id.ToString() })
+    @Html.ActionLink("Select", "ByParent", new { id = Model.Id })
+    @Html.Partial("NoteAction" + Model.NoteTypeEnum.ToString(), Model)
     </span>
     <span class="NoteDate">
     @Model.CreateDate.ToString("HH:mm")
     </span>
     </div>
-    @Html.Partial("NoteAction" + Model.NoteTypeEnum.ToString(), Model)
+   
 </div>

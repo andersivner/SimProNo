@@ -38,5 +38,16 @@ namespace SimProNo.Models
         {
             CompletedDate = DateTime.Now;
         }
+
+        public void SetText(string text)
+        {
+            Text = text;
+
+            var noteType = SimProNo.Models.NoteType.Status;
+            if (text.EndsWith("!"))
+                noteType = SimProNo.Models.NoteType.Task;
+
+            NoteTypeEnum = noteType;
+        }
     }
 }
